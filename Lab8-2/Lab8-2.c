@@ -65,7 +65,7 @@ START:
 		printf("Input Error!");
 		goto START;
 	}
-	if (a < ListLen(head))
+	if (a <= ListLen(head))
 	{
 		InsertIndexNode(head, a, str);
 	}

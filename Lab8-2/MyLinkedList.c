@@ -97,10 +97,11 @@ NODE* DeleteIndexNode(NODE* head, int index)
 {
 	NODE* prePt = NULL, * pt = NULL;
 	prePt = FindIndexNode(head, index - 1);
-	pt = FindIndexNode(head, index + 1);
+	pt = FindIndexNode(head, index);
 	if (prePt != NULL)
 	{
-		prePt->next = pt;
+		prePt->next = pt->next;
+		free(pt);
 	}
 	else
 	{
